@@ -18,5 +18,10 @@ int main() {
     
     cout << endl << test.get_root()->right->data << endl;
     
+    cout << endl;
+    
+    cout << "min: " << test.min() << endl;
+    cout << "max: " << test.max() << endl;
+    
     return 0;
 }

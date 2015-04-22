@@ -56,6 +56,45 @@ class Tree {
             }
             std::cout << std::endl;
         }
+        
+        T min()
+        {
+            if(root == 0)
+            {
+                return T();
+            }
+            
+            Node* curr = root;
+            
+            while(curr->left != 0)
+            {
+                
+                curr = curr->left;
+            }
+            
+            return curr->data;
+        }
+        
+        T max()
+        {
+            if(root == 0)
+            {
+                return T();
+            }
+            
+            Node* curr = root;
+            
+            while(curr->right != 0)
+            {
+                
+                curr = curr->right;
+            }
+            
+            
+            return curr->data;
+        }
+        
+        
 };
  
  
