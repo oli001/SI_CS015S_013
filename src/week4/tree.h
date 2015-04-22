@@ -94,7 +94,35 @@ class Tree {
             return curr->data;
         }
         
-        
+        Node* find(T value)
+        {
+            if(root == 0)
+            {
+                return 0;
+            }
+            
+            Node* curr = root;
+            
+            while(curr->right != 0 && curr->left != 0)
+            {
+                if(value < curr->data)
+                {
+                    curr = curr->left;
+                }
+                
+                if(value > curr->data)
+                {
+                    curr = curr->right;
+                }
+                
+                if(value == curr->data)
+                {
+                    return curr;
+                }
+            }
+            
+            return 0;
+        }
 };
  
  
