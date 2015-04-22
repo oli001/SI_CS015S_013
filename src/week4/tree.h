@@ -3,6 +3,8 @@
  
 #include <iostream>
 #include <queue>
+
+using namespace std;
  
 template<typename T>
 class Tree {
@@ -123,6 +125,15 @@ class Tree {
             
             return 0;
         }
+        
+        // T total()
+        // {
+        //     Node* curr = root;
+        //     while(curr->right != 0 && curr->left)
+        //     {
+                
+        //     }
+        // }
 };
  
  

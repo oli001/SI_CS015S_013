@@ -24,7 +24,7 @@ int main() {
     cout << "max: " << test.max() << endl;
     
     
-    cout << "finding 9: " << (test.find(9))->data << endl;
+    cout << "finding 20: " << (test.find(20))->data << endl;
     cout << "finding 8: " << (test.find(8))->data << endl;
     
     return 0;
