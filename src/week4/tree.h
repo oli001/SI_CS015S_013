@@ -27,6 +27,21 @@ class Tree {
             
             return n;
         }
+        
+        T total(Node* x)
+        {
+            if(x == 0)
+            {
+                return T();
+            }
+            
+            if(x -> left == 0 && x->right == 0)
+            {
+                return x->data;
+            }
+            
+            return x-> data + total(x->right) + total(x->left);
+        }
     
     public:
         Tree():root(0) { }
@@ -126,15 +141,10 @@ class Tree {
             return 0;
         }
         
-        // T total()
-        // {
-        //     Node* curr = root;
-        //     while(curr->right != 0 && curr->left)
-        //     {
-                
-        //     }
-        // }
+        T total()
+        {
+            return root-> data + total(root->left) + total(root->right);
+        }
 };
- 
  
 #endif

@@ -25,7 +25,9 @@ int main() {
     
     
     cout << "finding 20: " << (test.find(20))->data << endl;
-    cout << "finding 8: " << (test.find(8))->data << endl;
+    //cout << "finding 8: " << (test.find(8))->data << endl;
+    
+    cout << test.total() << endl;
     
     return 0;
 }
