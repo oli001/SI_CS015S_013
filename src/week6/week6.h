@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <list>
+#include <fstream>
 
 #ifndef WEEK6_H_
 #define WEEK6_H_
@@ -55,7 +56,13 @@ class UnorderedSet
         }
         
     public:
-        int count(const string & elem);
+        int count(const string & elem)
+        {
+            list<string>::iterator p = find(
+                (_buckets[str_hash(elem) % NUM_BUCKETS]).begin(),
+                (_buckets[str_hash(elem) % NUM_BUCKETS]).end(), elem);
+            return (p != (_buckets[str_hash(elem) % NUM_BUCKETS]).end());
+        }
         void remove(const string & elem) 
         {
             (_buckets[str_hash(elem) % NUM_BUCKETS]).remove(elem);
