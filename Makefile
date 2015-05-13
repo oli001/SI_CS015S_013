@@ -3,16 +3,16 @@ FLAGS = -W -Wall -Werror -pedantic
 
 week2:
 	mkdir bin 
-	$(COMPILE) $(FLAGS) src/week2/week2.cpp -o bin/week2
+	$(COMPILE) $(FLAGS) week2.cpp
 week3:
 	mkdir bin
-	$(COMPILE) $(FLAGS) src/week2/week3.cpp -o bin/week3
+	$(COMPILE) $(FLAGS) week3.cpp
 week4:
 	mkdir bin
-	$(COMPILE) $(FLAGS) src/week4/week4.cpp -o bin/week4
+	$(COMPILE) $(FLAGS) week4.cpp
 week5:
 	mkdir bin
-	$(COMPILE) $(FLAGS) src/week5/week4.cpp -o bin/week5
+	$(COMPILE) $(FLAGS) week5.cpp
 clean:
 	rm -fv week2
 	rm -fv week3
