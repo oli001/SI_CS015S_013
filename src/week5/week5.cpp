@@ -18,26 +18,28 @@ map<string, unsigned int> freq_map(vector<string> words)
     return wordMap;
 }
 
-// vector<string> top_n(map<string, unsigned int> freq_map, unsigned int n = 5)
-// {
-//     vector<string> newVec(n);
-//     auto mit = freq_map.begin();
-//     auto vit = newVec.begin();
+vector<string> top_n(map<string, unsigned int> freq_map, unsigned int n = 5)
+{
+    vector<string> newVec(n);
+    auto mit = freq_map.begin();
+    auto vit = newVec.begin();
     
-//     while(mit != freq_map.end())
-//     {
-//         while(vit != newVec.end())
-//         {
-//             if(*vit == string())
-//             {
-//                 *vit = 
-//             }
-//         }
-//         ++mit;
-//     }
     
-//     return newVec;
-// }
+    
+    while(mit != freq_map.end())
+    {
+        while(vit != newVec.end())
+        {
+            if(*vit == string())
+            {
+                *vit = mit->first;
+            }
+        }
+        ++mit;
+    }
+    
+    return newVec;
+}
 
 int main(int argc, char* argv[])
 {
@@ -79,14 +81,14 @@ int main(int argc, char* argv[])
         cout << counting[finding] << endl;
     }
     
-    // vector<string> most;
-    // most = top_n(counting, 2);
+    vector<string> most;
+    most = top_n(counting, 2);
     
-    // cout << "Top 2 words: " << endl;
-    // auto iter = most.begin();
-    // while(iter != most.end())
-    // {
-    //     cout << *iter << endl;
-    // }
+    cout << "Top 2 words: " << endl;
+    auto iter = most.begin();
+    while(iter != most.end())
+    {
+        cout << *iter << endl;
+    }
     return 0;
 }
