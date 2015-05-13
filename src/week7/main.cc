@@ -16,6 +16,7 @@ int main()
     mh.push(8);
     mh.push(42);
     mh.push(31);
+    mh.pop();
     
     mh.print();
     cout << endl;
