@@ -83,22 +83,31 @@ int naive_partition(vector<T> & v, int first, int mid, int last, Compare comp = 
     return index;
 }
 
-// /*
-//  * uses the median of three pivot selection method, and the naive partition method
-//  * to implement quicksort
-//  *
-//  * has a base case of a list of size 1 or fewer
-//  */
+/*
+ * uses the median of three pivot selection method, and the naive partition method
+ * to implement quicksort
+ *
+ * has a base case of a list of size 1 or fewer
+ */
 // template<typename T, typename Compare = less<T>>
-// void naive_quicksort(vector<T> & v, int first, int last, Compare comp = Compare());
-
-// /*
-//  * overload
-//  */
-// template<typename T>
-// void naive_quicksort(vector<T> & v) {
-//     naive_quicksort(v, 0, v.size());
+// void naive_quicksort(vector<T> & v, int first, int last, Compare comp = Compare())
+// {
+//     if( <= 1)
+//     {
+//         return;
+//     }
+    
+    
 // }
+
+/*
+ * overload
+ */
+template<typename T>
+void naive_quicksort(vector<T> & v) 
+{
+    naive_quicksort(v, 0, v.size());
+}
 
 // /*
 //  * uses the median of three pivot selection method, and the faster partition method
