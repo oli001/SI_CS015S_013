@@ -89,16 +89,16 @@ int naive_partition(vector<T> & v, int first, int mid, int last, Compare comp = 
  *
  * has a base case of a list of size 1 or fewer
  */
-// template<typename T, typename Compare = less<T>>
-// void naive_quicksort(vector<T> & v, int first, int last, Compare comp = Compare())
-// {
-//     if( <= 1)
-//     {
-//         return;
-//     }
+template<typename T, typename Compare = less<T>>
+void naive_quicksort(vector<T> & v, int first, int last, Compare comp = Compare())
+{
+    if(last <= 1)
+    {
+        return;
+    }
     
     
-// }
+}
 
 /*
  * overload
